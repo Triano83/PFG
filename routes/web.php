@@ -11,4 +11,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/precios', App\Http\Controllers\PreciosController::class);
-Route::get('/homenoadmin', function () {return view('homenoadmin');})->name('homenoadmin');
+Route::get('/homenoadmin', [App\Http\Controllers\HomenoadminController::class, "index"])->name('homenoadmin');
